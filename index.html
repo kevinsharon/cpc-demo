@@ -1,57 +1,124 @@
-<html>
-	<body>
-		<h1>A Github Primer</h1>
-		<h2>Created for Central Park Conservancy</h2>
-		<h3>Presented: June 20, 2017</h3>
-		<h4>What you will be able to do after today:</h4>
-		<ul>
-			<li>Understand terms like: repository, push, pull, commit, and more!</li>
-			<li>Create and use a repository</li>
-			<li>Start and manage a new branch</li>
-			<li>Make changes to a file and push them to GitHub as commits</li>
-			<li>Open and merge a pull request</li>
-		</ul>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CPC GitHub Primer</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container">
+	<h1>A GitHub Primer</h1>
+	<h2>Created for: Central Park Conservancy</h2>
+	<h3>Presented: June 20, 2017</h3>
+
+	<hr />
+
+	<h4>What you will be able to do after today:</h4>
+	<ul>
+		<li>Understand terms like: repository, push, pull, commit, and more!</li>
+		<li>Create and use a repository</li>
+		<li>Start and manage a new branch</li>
+		<li>Make changes to a file and push them to GitHub as commits</li>
+		<li>Open and merge a pull request</li>
+	</ul>
+	
+	<hr />
+	
+	<h4>Getting Started</h4>
+		<ol>
+			<li>Go to <code>github.com</code> and sign up for an account</li>
+			<li>Go to <code>desktop.github.com</code> and download the GitHub desktop app</li>
+			<li>Install the app, open it and sign in</li>
+		</ol>
+	
+	<h4>Create a Repository</h4>
+		<ol>
+			<li>Select <code>File > New Repository</code></li>
+			<li>Name it <code>cpcDemoJune2017</code></li>
+			<li>Select Initialize this repository with a README</li>
+		</ol>
+		<p>Now you have a code repository (or "repo") to work with. This comes with a default branch called "Master". We're going to add an exiting file to this branch and make some changes to it</p>
+	
+	<h4>Committing</h4>
+		<ol>
+			<li>Open <code>index.html</code></li>
+			<li>Change text and save file</li>
+			<li>In GitHub app view your changes, add a summary and commit to master</li>
+			<li>Select Publish</li>
+		</ol>
+		<p>Your changes are not committed to GitHub and the Master branch now has the latest code. Others working on the branch should now Fetch origin to get the latest code.</p>
 		
-		<h4>Getting Started</h4>
-			<ol>
-				<li>Go to github.com and sign up for an account</li>
-				<li>Go to desktop.github.com and download the GitHub desktop app</li>
-				<li>Install the app, open it and sign in</li>
-			</ol>
+		<h4>Branches</h4>
+		<ol>
+			<li>Select <code>Branch > New Branch</code></li>
+			<li>Name the new Branch <code>production</code></li>
+			<li>Select <code>production</code> under current branch</li>
+			<li>Open the <code>index.html</code>, make a change and save it, and commit your changes to the production branch</li>
+		</ol>
+		<p>Multiple developers can work with the same repo, within their own branch or on a shared branch. If you're developing specific featues on the site you can create a branch just for working in that new feature. The other developers won't see that feature unless they work in that branch or you branch gets Merged into the master branch.</p>
 		
-		<h4>Create a Repository</h4>
+		<h4>Merging</h4>
 			<ol>
-				<li>Select File > New Repository</li>
-				<li>Name it "cpcDemoJune2017"</li>
-				<li>Select Initialize this repository with a README</li>
+				<li>Select <code>master</code> as the current branch</li>
+				<li>Select <code>Branch > Merge</code> into current branch</li>
+				<li>Select <code>production</code> and Merge into <code>master</code></li>
+				<li>Select <code>Push</code> to complete the merge</li>
 			</ol>
-			<p>Now you have a code repository (or "repo") to work with. This comes with a default branch called "Master". We're going to add an exiting file to this branch and make some changes to it</p>
+
+	<hr />
 		
-		<h4>Committing</h4>
-			<ol>
-				<li>Open index.html</li>
-				<li>Change text and save file</li>
-				<li>In GitHub app view your changes, add a summary and commit to master</li>
-				<li>Select Publish</li>
-			</ol>
-			<p>Your changes are not committed to GitHub and the Master branch now has the latest code. Others working on the branch should now Fetch origin to get the latest code.</p>
+		<h2>Local Development</h2>
+		
+		<h4>GitHub</h4>
+		<ol>
+			<li>Go to the repo on GitHub and select <code>Clone or Download</code>. Click the copy icon and get the link to the repo</li>
+			<li>Open the GitHub App and select <code>File > Clone Repository</code></li>
+			<li>Select a local folder to maintain your site and add the link you copied from GitHub</li>
+		</ol>
 			
-			<h4>Branches</h4>
-			<ol>
-				<li>Select Branch > New Branch</li>
-				<li>Name the new Branch "production" (all lowercase)</li>
-				<li>Select production under current branch</li>
-				<li>Open the index.html, make a change and save it, and commit your changes to the production branch</li>
-			</ol>
-			<p>Multiple developers can work with the same repo, within their own branch or on a shared branch. If you're developing specific featues on the site you can create a branch just for working in that new feature. The other developers won't see that feature unless they work in that branch or you branch gets Merged into the master branch.</p>
-			
-			<h4>Merging</h4>
-				<ol>
-					<li>Select master as the current branch</li>
-					<li>Select Branch > Merge into current branch</li>
-					<li>Select production and Merge into master</li>
-					<li>Select Push to complete the merge</li>
-				</ol>
-				
-	</body>
+		<h4>CodeKit</h4>
+		<ol>
+			<li>Download <a href="https://codekitapp.com/">CodeKit</a></li>
+			<li>Open CodeKit select <code>File > New Project</code></li>
+			<li>Select the parent folder of the project and select <code>Add</code></li>
+		</ol>
+		
+
+		<h4>Download the Database</h4>
+		<ol>
+			<li>Log in to the Craft control panel from the <a href="cpc-dev.return.tc/admin">staging site</a></li>
+			<li>Go to the <a href="cpc-dev.return.tc/admin/settings">settings page</a> and download the <code>Backup Database</code></li>
+			<li>Save this file in an easy to find location</li>
+			<li>Go to the local file and unzip it</li>
+		</ol>
+		
+		<h4>Sequel Pro</h4>
+		<ol>
+			<li>Download <a href="https://www.sequelpro.com/">Sequel Pro</a></li>
+			<li>In the main window select <code>Socket</code></li>
+			<li>For <code>Name</code> enter <code>Localdev</code> and for <code>Username</code> and <code>Password</code>, enter <code>Root</code>, then select <code>Connect</code></li>
+			<li>Select <code>Database > Add Database</code></li>
+			<li>For <code>Database Name</code> enter <code>cpc_projects</code></li>
+			<li>Select <code>File > Import</code> and select the <code>.sql</code> file</li>
+		</ol>
+		
+		<h4>MAMP/Running the site locally</h4>
+		<ol>
+			<li>Download <a href="https://www.mamp.info/en/">MAMP</a></li>
+			<li>Click on the gear icon <code>Web Server > Document Root</code> (folder icon) and select the Public folder inside of the repo you just cloned</li>
+			<li>Select <code>Start Servers</code></li>
+			<li>Select <code>Open WebStart page</code></li>
+		</ol>
+		
+</div></body>
 </html>
